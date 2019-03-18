@@ -1,0 +1,26 @@
+{
+  "name": "gitbook-plugin-viz",
+  "description": "Viz.js plugin for GitBook",
+  "keywords": [
+    "gitbook",
+    "viz",
+    "graphviz"
+  ],
+  "main": "index.js",
+  "version": "0.0.1",
+  "engines": {
+    "gitbook": ">=3.0.0"
+  },
+  "homepage": "https://github.com/b41sh/gitbook-plugin-viz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b41sh/gitbook-plugin-viz.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/b41sh/gitbook-plugin-viz/issues"
+  },
+  "dependencies": {
+    "viz.js": "^2.1.2"
+  }
+}
