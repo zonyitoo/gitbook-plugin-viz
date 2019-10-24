@@ -2,7 +2,7 @@ const Viz = require('viz.js/viz.js');
 const { Module, render } = require('viz.js/full.render.js');
 
 let viz = new Viz({ Module, render });
-let visRx = /^```viz((.*[\r\n]+)+?)?```$/im;
+let visRx = /^```(viz|graphviz)((.*[\r\n]+)+?)?```$/im;
 let Render = function(viz, vizContent) {
   return viz.renderString(vizContent).then(result => {return result});
 }
@@ -13,7 +13,7 @@ module.exports = {
       let match;
       while ((match = visRx.exec(page.content))) {
         let rawBlock = match[0];
-        let vizContent = match[1];
+        let vizContent = match[2];
         try {
             let data = await Render(viz, vizContent);
             // hardcode remove xml DOCTYPE
